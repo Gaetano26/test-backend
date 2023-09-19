@@ -165,7 +165,7 @@ return [
             'category' => 'Olio',
         ],
         [
-            'name' => 'Formaggio Parmigiano Reggiano di Milazzo',
+            'name' => 'Parmigiano Reggiano di Milazzo',
             'weight'=> '300 gr',
             'price' => 15.00,
             'image_url' => 'https://shop.silvanoromaniparma.it/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/c/u/cuoreparmigiano_1.jpg',
@@ -173,7 +173,7 @@ return [
             'category' => 'Formaggi',
         ],
         [
-            'name' => 'Formaggio Parmigiano Reggiano di Misterbianco',
+            'name' => 'Parmigiano Reggiano di Misterbianco',
             'weight'=> '400 gr',
             'price' => 15.50,
             'image_url' => 'https://www.caseificiodelparco.it/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/u/n/un-ottavo_1.jpg',
@@ -181,7 +181,7 @@ return [
             'category' => 'Formaggi',
         ],
         [
-            'name' => 'Formaggio Parmigiano Reggiano di Centuripe',
+            'name' => 'Parmigiano Reggiano di Centuripe',
             'weight'=> '350 gr',
             'price' => 13.50,
             'image_url' => 'https://shop.silvanoromaniparma.it/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/p/a/parmigiano1.jpg',
@@ -189,7 +189,7 @@ return [
             'category' => 'Formaggi',
         ],
         [
-            'name' => 'Formaggio Parmigiano Reggiano di Leonforte',
+            'name' => 'Parmigiano Reggiano di Leonforte',
             'weight'=> '300 gr',
             'price' => 14.00,
             'image_url' => 'https://www.ferrarini.com/wp-content/uploads/2020/05/products-62289.jpg',
@@ -197,7 +197,7 @@ return [
             'category' => 'Formaggi',
         ],
         [
-            'name' => 'Formaggio Parmigiano Reggiano di Nicosia',
+            'name' => 'Parmigiano Reggiano di Nicosia',
             'weight'=> '450 gr',
             'price' => 17.00,
             'image_url' => 'https://www.ilsalumiereparma.it/323-large_default/punta-parmigiano-reggiano-dop-24-mesi-1kg.jpg',
@@ -286,4 +286,23 @@ return [
         'quantity' => 30,
         'category' => 'Limoni',
     ],
+
+    'payments' =>[
+        [
+            'name' => 'Cash on Delivery',
+            'additional_cost' => 10.00,
+            'last' => null,
+            'first' => null,
+            'credit_card_number' => null,
+            'cvc' => null,
+        ],
+        [
+            'name' => 'Credit Card',
+            'additional_cost' => 0.00,
+            'last' => 'Doe',
+            'first' => 'John',
+            'credit_card_number' => 1234567890123456,
+            'cvc' => 123,
+        ],
+    ]
 ];

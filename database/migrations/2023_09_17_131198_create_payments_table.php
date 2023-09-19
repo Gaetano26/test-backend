@@ -17,6 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->decimal('additional_cost', 10, 2);
+            $table->string('last')->nullable();
+            $table->string('first')->nullable();
+            $table->unsignedBigInteger('credit_card_number')->nullable();
+            $table->unsignedBigInteger('cvc')->nullable();
             $table->timestamps();
         });
     }

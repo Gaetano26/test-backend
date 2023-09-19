@@ -15,7 +15,15 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::inRandomOrder()->paginate(12);
+        $data = [
+            'products' => $products,
+        ];
+        return response()->json([
+            'status' => true,
+            'message' => 'Ok',
+            'results' => $data
+        ], 200);
     }
 
     /**
@@ -45,9 +53,21 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($slug)
     {
-        //
+        $product = Product::where('slug', $slug)->firstOrFail();
+        if ($product) {
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Ok',
+                'results' => $product
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Error'
+            ], 404);
+        }
     }
 
     /**
