@@ -36,7 +36,7 @@ class ChartController extends Controller
      */
     public function store(StoreChartRequest $request)
     {
-        //
+      //
     }
 
     /**
@@ -82,5 +82,17 @@ class ChartController extends Controller
     public function destroy(Chart $chart)
     {
         //
+    }
+
+
+    public function createChart(StoreChartRequest $request) {
+        $chart = new Chart([
+            'user_id' => $request->input('user_id')
+        ]);
+
+        $chart->save();
+
+        // Restituisci una risposta di successo
+        return response()->json(['message' => 'Carrello creato con successo'], 201);
     }
 }
